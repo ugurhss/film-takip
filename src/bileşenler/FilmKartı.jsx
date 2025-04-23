@@ -67,5 +67,6 @@ const FilmKartı = ({
     </Card>
   );
 };
+// askdjasjkd
 
 export default FilmKartı;
