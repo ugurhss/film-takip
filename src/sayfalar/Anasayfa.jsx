@@ -3,12 +3,12 @@ import { filmleriGetir } from "../api/filmApi";
 import FilmKartı from "../bileşenler/FilmKartı";
 import { Grid, Typography, Container, TextField } from "@mui/material";
 
-const Anasayfa = ({ izlediklerimEkle, izlemediklerimEkle }) => {
-  const [filmler, setFilmler] = useState([]);
-  const [arama, setArama] = useState("");
+const Anasayfa = ({ izlediklerimEkle, izlemediklerimEkle }) => {// izlediklerimEkle ve izlemediklerimEkle fonksiyonlarını prop olarak alıyoruz
+  const [filmler, setFilmler] = useState([]); // filmler state'i
+  const [arama, setArama] = useState("");// arama state'i
 
-  useEffect(() => {
-    const veriyiGetir = async () => {
+  useEffect(() => {// sayfa ilk yüklendiğinde çalışır
+    const veriyiGetir = async () => { // veriyiGetir fonksiyonu api'den veri çekmek için
       const gelenFilmler = await filmleriGetir();
       setFilmler(gelenFilmler);
     };

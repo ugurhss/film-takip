@@ -2,7 +2,7 @@
 import { Typography, Grid, Container } from "@mui/material";
 import FilmKartı from "../bileşenler/FilmKartı";
 
-const Izlemediklerim = ({ filmler, kaldır }) => {
+const Izlemediklerim = ({ filmler, kaldır }) => {// filmler ve kaldır fonksiyonunu prop olarak alıyoruz filmKartıdan
   return (
     <Container>
       <Typography variant="h4" mt={4} mb={2}>İzlemediğim Filmler</Typography>

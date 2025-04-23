@@ -2,7 +2,7 @@
 import { Card, CardMedia, CardContent, Typography, Button, Stack } from "@mui/material";
 import Swal from 'sweetalert2';
 
-const FilmKartı = ({
+const FilmKartı = ({// film, // film objesi prop olarak alınıyor yukarıdan 
   film,
   izledimEkle,
   izlemedimEkle,
@@ -10,7 +10,7 @@ const FilmKartı = ({
   gösterButonlar = true
 }) => {
 
-  const izledimTikla = () => {
+  const izledimTikla = () => {//click event ile izledimEkle fonksiyonunu çağırıyoruz
     izledimEkle(film);
     Swal.fire({
       icon: 'success',
